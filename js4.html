@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculos.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Calcular raíces
+        </h1>
+    </header>
+    <section>
+        <div class="calculos" id="a"></div>
+        <div class="calculos" id="salida"></div>
+    </section>
+    <script>
+            var a=parseFloat(prompt("Ingres variable a: ", "0"))
+            var b=parseFloat(prompt("Ingres variable b: ", "0"))
+            var c=parseFloat(prompt("Ingres variable c: ", "0"))
+
+            var d= Math.pow(b, 2) - (4*a*c);
+            var x1=((-b+Math.sqrt(d))/(2*a));
+            var x2=((-b-Math.sqrt(d))/(2*a));
+            
+            document.getElementById("a").innerHTML="Valores ingresados: "+a+", "+b+", "+c;
+            if (d==0){
+                document.getElementById("salida").innerHTML="La ecuación tiene una solución "+x1;
+            }
+            else if(d>0){
+                document.getElementById("salida").innerHTML="La ecuación tiene dos soluciónes "+x1+" y "+x2;
+            }
+            else{
+                document.getElementById("salida").innerHTML="La ecuación no tiene solución";
+            } 
+    </script>
+</body>
+</html>
